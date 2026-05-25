@@ -43,8 +43,27 @@ n = 80, \qquad \alpha = 0.05.
 
 ### 1.1. Линейная модель
 
+
 ```math
-\hat y = a + bx.
+
+S_{xx} = \sum_{i=1}^{n}(x_i - \bar x)^2
+
+\qquad
+
+S_{xy} = \sum_{i=1}^{n}(x_i - \bar x)(y_i - \bar y)
+
+\qquad
+
+\hat b = \frac{S_{xy}}{S_{xx}}
+
+\qquad
+
+\hat a = \bar y - \hat b \bar x
+
+\qquad
+
+\hat y = \hat a + \hat b x
+
 ```
 
 ```math
@@ -60,7 +79,25 @@ n = 80, \qquad \alpha = 0.05.
 ### 1.2. Квадратичная модель
 
 ```math
-\hat y = a + bx + cx^2.
+
+\hat y = a + bx + cx^2
+
+\qquad
+
+\frac{\partial RSS}{\partial a} = 0
+
+\qquad
+
+\frac{\partial RSS}{\partial b} = 0
+
+\qquad
+
+\frac{\partial RSS}{\partial c} = 0
+
+\qquad
+
+RSS = \sum_{i=1}^{n}(y_i - \hat y_i)^2
+
 ```
 
 ```math
@@ -76,7 +113,25 @@ n = 80, \qquad \alpha = 0.05.
 ### 1.3. Степенная модель
 
 ```math
-\hat y = ax^b.
+
+\hat y = ax^b
+
+\qquad
+
+\ln y = \ln a + b \ln x
+
+\qquad
+
+Y = \alpha + bX
+
+\qquad
+
+Y = \ln y,\qquad X = \ln x
+
+\qquad
+
+a = e^{\alpha}
+
 ```
 
 Линеаризация:
@@ -121,7 +176,7 @@ Y_i = \hat a + \hat b x_i + e_i.
 
 ```math
 \hat b = \frac{S_{xy}}{S_{xx}}, \qquad
-\hat a = \bar y - \hat\theta_1\bar x.
+\hat a = \bar y - \hat b \bar x.
 ```
 
 Исходные величины:
